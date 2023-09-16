@@ -5,7 +5,7 @@
 - [x] React-JS
 - [x] TypeScript
 - [X] TailWindCSS
-[x] Node-JS
+- [x] Node-JS
 - [x] Prisma
 - [X] OpenAI
 - [X] Fastify
@@ -39,6 +39,10 @@ After installing, open the installed folder with terminal and run `cd upload-ai-
 5. Create a pull request.
 
 see the GitHub documentation on [how to create a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)
+
+## 📷 Image
+
+![a](https://github.com/renanzitoo/upload-AI/assets/91814882/fe4adeb7-7d4c-4035-bc95-fc2046c22a64)
 
 ## 🤝 By
 
