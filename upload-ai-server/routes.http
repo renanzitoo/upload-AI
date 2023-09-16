@@ -1,0 +1,37 @@
+# @name get-prompts
+GET http://localhost:3004/prompts
+
+###
+
+# @name upload
+POST http://localhost:3004/videos
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="example.mp3"
+Content-Type: audio/npeg
+
+< ./example.mp3
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+###
+
+# @name create-transcription
+POST http://localhost:3004/videos/26bca8ad-efda-462e-b72c-b2291a4e25b1/transcription
+Content-Type: application/json
+
+{
+  "prompt": "humor e piadas, orochi, meme"
+}
+
+###
+
+# @name generate-ai-completion
+POST http://localhost:3004/ai/complete
+Content-Type: application/json
+
+{
+  "videoId": "26bca8ad-efda-462e-b72c-b2291a4e25b1",
+  "temperature": 0.5,
+  "prompt": "Gere um resumo sucinto da transcrição do video informado a seguir: '''{transcription}''' "
+}
